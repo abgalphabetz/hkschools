@@ -9,33 +9,38 @@ import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
 import { State } from '../../store';
 import { actions } from './actions';
-import { SchoolFeature } from './schoolListEpic';
+import { School } from './schools';
 
 
-class SchoolList extends React.Component<{ schoolList: SchoolFeature[], fetch: () => void }, { columnDefs: Array<any>, defaultColDef: any }> {
+class SchoolList extends React.Component<{ schoolList: School[], fetch: () => void }, { columnDefs: Array<any>, defaultColDef: any }> {
     gridApi: GridApi | undefined
 
-    constructor(props: { schoolList: SchoolFeature[], fetch: () => void }) {
+    constructor(props: { schoolList: School[], fetch: () => void }) {
         super(props);
         this.state = {
             columnDefs: [
-                { headerName: "GMID", field: "properties.GMID", checkboxSelection: true },
-                { headerName: "Dataset", field: "properties.Dataset" },
-                { headerName: "Facility Name", field: "properties.Facility Name" },
-                { headerName: "Address", field: "properties.Address" },
-                { headerName: "Students Gender", field: "properties.Students Gender" },
-                { headerName: "Session", field: "properties.Session" },
-                { headerName: "District", field: "properties.District" },
-                { headerName: "School Level", field: "properties.School Level" },
-                { headerName: "Finance Type", field: "properties.Finance Type" },
-                { headerName: "Religion", field: "properties.Religion" },
-                { headerName: "Telephone", field: "properties.Telephone" },
-                { headerName: "Fax Number", field: "properties.Fax Number" },
-                { headerName: "Website", field: "properties.Website" },
-                { headerName: "SCHOOL NO.", field: "properties.SCHOOL NO." },
-                { headerName: "Last Update", field: "properties.Last Update" }
+                { headerName: "GMID", field: "gmid", checkboxSelection: true },
+                { headerName: "Dataset", field: "dataset" },
+                { headerName: "Name", field: "name" },
+                { headerName: "Address", field: "address" },
+                { headerName: "Students Gender", field: "studentsGender" },
+                { headerName: "Session", field: "session" },
+                { headerName: "District", field: "district" },
+                { headerName: "School Level", field: "schoolLevel" },
+                { headerName: "Finance Type", field: "financeType" },
+                { headerName: "Religion", field: "religion" },
+                { headerName: "Telephone", field: "telephone" },
+                { headerName: "Fax Number", field: "faxNumber" },
+                { headerName: "Website", field: "website" },
+                { headerName: "School No.", field: "schoolNumber" },
+                { headerName: "Last Update", field: "lastUpdate" }
             ],
-            defaultColDef: { sortable: true, filter: true }
+            defaultColDef: { 
+                width: 100,
+                resizable: true,
+                sortable: true, 
+                filter: true 
+            }
         }
     }
 
@@ -50,10 +55,11 @@ class SchoolList extends React.Component<{ schoolList: SchoolFeature[], fetch: (
                 style={{ height: '800px', width: '100%' }}
             >
                 <AgGridReact
-                    // groupSelectsChildren={true}
+                    groupSelectsChildren={true}
                     onGridReady={(params) => this.gridApi = params.api}
                     rowSelection="multiple"
                     columnDefs={this.state.columnDefs}
+                    defaultColDef={this.state.defaultColDef}
                     rowData={this.props.schoolList}
                 >
                 </AgGridReact>

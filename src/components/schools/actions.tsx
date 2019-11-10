@@ -1,4 +1,11 @@
-import { Types, SchoolFeature } from './schoolListEpic'
+import { School } from './schools';
+
+
+export const Types = {
+    FETCH_SCHOOLS: 'FETCH_SCHOOLS',
+    FETCH_SCHOOLS_SUCCESS: 'FETCH_SCHOOLS_SUCCESS'
+};
+
 
 export const actions = {
     fetch() {
@@ -6,7 +13,7 @@ export const actions = {
             type: Types.FETCH_SCHOOLS
         };
     },
-    fetchSuccess(data: SchoolFeature[]) {
+    fetchSuccess(data: School[]) {
         return {
             type: Types.FETCH_SCHOOLS_SUCCESS,
             payload: data

@@ -3,8 +3,9 @@ import makerReducer from './makerReducer';
 import logger from './logger';
 import { makerEpic } from './makerEpic'
 import { createEpicMiddleware } from 'redux-observable'
-import { SchoolFeature, schoolListEpic } from './components/schools/schoolListEpic';
+import { schoolListEpic } from './components/schools/schoolListEpic';
 import rootReducer from './rootReducer';
+import { School } from './components/schools/schools';
 
 export interface Maker {
     make: string,
@@ -14,7 +15,7 @@ export interface Maker {
 
 export interface State {
     makers: Maker[]
-    schoolList: SchoolFeature[]
+    schoolList: School[]
 }
 
 const initialState: State = {
