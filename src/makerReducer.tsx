@@ -1,14 +1,12 @@
 import { types } from './makerTypes';
-import { State } from './store';
+import { State, Maker } from './store';
 
 
-export default function makerReducer(state: State = { makers: [] }, action: any) {
+export default function makerReducer(state: Maker[] = [], action: any) {
     const payload = action.payload;
     switch (action.type) {
         case types.FETCH_MAKERS_SUCCESS:
-            return {
-                makers: [...state.makers, ...payload]
-            };
+            return payload;
         default:
             return state;
     }

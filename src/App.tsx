@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import MainTable from './MainTable'
+import SchoolList from './components/schools/SchoolList'
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <MainTable />
+      <SchoolList />
     </div>
   );
 }
