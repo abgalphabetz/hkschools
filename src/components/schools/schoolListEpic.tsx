@@ -1,7 +1,7 @@
 import { map, mergeMap } from 'rxjs/operators';
 import { ajax } from 'rxjs/ajax';
 import { ofType } from 'redux-observable';
-import { actions } from './Actions'
+import { actions } from './actions'
 import { Observable } from 'rxjs';
 
 

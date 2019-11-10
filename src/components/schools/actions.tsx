@@ -1,4 +1,4 @@
-import { Types, SchoolFeature } from './SchoolListEpic'
+import { Types, SchoolFeature } from './schoolListEpic'
 
 export const actions = {
     fetch() {

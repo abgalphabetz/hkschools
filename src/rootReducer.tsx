@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import makerReducer from './makerReducer';
-import schoolListReducer from './components/schools/schoolListReducer';
+import schoolListReducer from './components/schools/reducer';
 
 
 const rootReducer = combineReducers({

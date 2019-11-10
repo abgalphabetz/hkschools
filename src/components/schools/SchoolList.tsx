@@ -8,8 +8,8 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
 import { State } from '../../store';
-import { actions } from './Actions';
-import { SchoolFeature } from './SchoolListEpic';
+import { actions } from './actions';
+import { SchoolFeature } from './schoolListEpic';
 
 
 class SchoolList extends React.Component<{ schoolList: SchoolFeature[], fetch: () => void }, { columnDefs: Array<any>, defaultColDef: any }> {

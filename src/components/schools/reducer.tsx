@@ -1,5 +1,5 @@
 import { State } from '../../store';
-import { SchoolFeature, Types } from './SchoolListEpic';
+import { SchoolFeature, Types } from './schoolListEpic';
 
 
 export default function schoolListReducer(state: SchoolFeature[] = [], action: any): SchoolFeature[] {

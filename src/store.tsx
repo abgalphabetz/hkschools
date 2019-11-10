@@ -3,7 +3,7 @@ import makerReducer from './makerReducer';
 import logger from './logger';
 import { makerEpic } from './makerEpic'
 import { createEpicMiddleware } from 'redux-observable'
-import { SchoolFeature, schoolListEpic } from './components/schools/SchoolListEpic';
+import { SchoolFeature, schoolListEpic } from './components/schools/schoolListEpic';
 import rootReducer from './rootReducer';
 
 export interface Maker {
