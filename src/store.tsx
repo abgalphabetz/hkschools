@@ -3,9 +3,9 @@ import makerReducer from './makerReducer';
 import logger from './logger';
 import { makerEpic } from './makerEpic'
 import { createEpicMiddleware } from 'redux-observable'
-import { schoolListEpic } from './components/schools/schoolListEpic';
+import { schoolListEpic } from './components/schools/epic';
 import rootReducer from './rootReducer';
-import { School } from './components/schools/schools';
+import { School } from './components/schools/schools.d';
 
 export interface Maker {
     make: string,

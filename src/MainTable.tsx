@@ -44,9 +44,6 @@ class MainTable extends React.Component<MainTableProps, MainTableState> {
     }
 
     componentDidMount() {
-        // fetch('https://api.myjson.com/bins/ly7d1')
-        //     .then(result => result.json())
-        //     .then(rowData => this.setState({ rowData }))
         this.props.fetchMakers();
     }
 

@@ -9,7 +9,7 @@ import 'ag-grid-community/dist/styles/ag-theme-material.css';
 
 import { State } from '../../store';
 import { actions } from './actions';
-import { School } from './schools';
+import { School } from './schools.d';
 
 
 class SchoolList extends React.Component<{ schoolList: School[], fetch: () => void }, { columnDefs: Array<any>, defaultColDef: any }> {

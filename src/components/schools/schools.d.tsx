@@ -19,4 +19,9 @@ export interface School {
     website: string
     schoolNumber: string
     lastUpdate: string
-}
+};
+
+export enum ActionTypes {
+    FETCH_SCHOOLS,
+    FETCH_SCHOOLS_SUCCESS
+};

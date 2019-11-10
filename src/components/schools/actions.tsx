@@ -1,21 +1,15 @@
-import { School } from './schools';
-
-
-export const Types = {
-    FETCH_SCHOOLS: 'FETCH_SCHOOLS',
-    FETCH_SCHOOLS_SUCCESS: 'FETCH_SCHOOLS_SUCCESS'
-};
+import { School, ActionTypes } from './schools.d';
 
 
 export const actions = {
     fetch() {
         return {
-            type: Types.FETCH_SCHOOLS
+            type: ActionTypes.FETCH_SCHOOLS
         };
     },
     fetchSuccess(data: School[]) {
         return {
-            type: Types.FETCH_SCHOOLS_SUCCESS,
+            type: ActionTypes.FETCH_SCHOOLS_SUCCESS,
             payload: data
         };
     }
