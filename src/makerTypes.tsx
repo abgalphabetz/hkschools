@@ -1,4 +1,0 @@
-export const types = {
-    FETCH_MAKERS: 'FETCH_MAKERS',
-    FETCH_MAKERS_SUCCESS: 'FETCH_MAKERS_SUCCESS'
-};
